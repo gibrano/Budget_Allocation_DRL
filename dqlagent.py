@@ -1,9 +1,3 @@
-#
-# Deep Q-Learning Agent
-#
-# (c) Dr. Yves J. Hilpisch
-# Reinforcement Learning for Finance
-#
 
 import os
 import random
@@ -21,14 +15,6 @@ import tensorflow_probability as tfp
 from collections import deque
 from tqdm import tqdm
 import time
-
-#warnings.simplefilter('ignore')
-#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
-
-#from tensorflow.python.framework.ops import disable_eager_execution
-#disable_eager_execution()
-
 
 class DQLAgent:
     def __init__(self, symbol, feature, n_features, env, hu=24, lr=0.001):
@@ -104,7 +90,6 @@ class DQLAgent:
                     break
             if len(self.memory) > self.batch_size:
                 self.replay()  
-            #print(self.episodes,"iter:", f ,"episode time:",time.process_time() - start)
             
         print()
         
